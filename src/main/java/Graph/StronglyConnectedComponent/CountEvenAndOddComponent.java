@@ -109,20 +109,36 @@ public class CountEvenAndOddComponent {
 	public static void main(String args[]) {
 		
 		Graph<Integer> graph = new Graph<>(true);
-		/*graph.addEdge(0, 1);
-		graph.addEdge(1, 2);
-		graph.addEdge(2, 0);
-		graph.addEdge(1, 3);
-		graph.addEdge(3, 4);
-		graph.addEdge(4, 5);
-		graph.addEdge(5, 3);
-		graph.addEdge(5, 6);*/
-		graph.addEdge(1, 4);
-		graph.addEdge(1, 3);
-		graph.addEdge(2, 4);
-		graph.addEdge(3, 4);
-		graph.addEdge(4, 5);
-		graph.addEdge(5, 1);
+		/*3 1
+12 11
+10 9
+8 5
+1 12
+10 2
+1 14
+7 9
+10 13
+11 1
+6 5
+1 15
+2 11
+2 6
+9 11*/
+		graph.addEdge(3, 1);
+		graph.addEdge(12, 11);
+		graph.addEdge(10, 9);
+		graph.addEdge(8, 5);
+		graph.addEdge(1, 12);
+		graph.addEdge(10, 2);
+		graph.addEdge(1, 14);
+		graph.addEdge(7, 9);
+		graph.addEdge(10, 13);
+		graph.addEdge(11, 1);
+		graph.addEdge(6, 5);
+		graph.addEdge(1, 15);
+		graph.addEdge(2, 11);
+		graph.addEdge(2, 6);
+		graph.addEdge(9, 11);
 
 		CountEvenAndOddComponent scc = new CountEvenAndOddComponent();
 		List<Set<Vertex<Integer>>> result = scc.scc(graph);
@@ -131,12 +147,19 @@ public class CountEvenAndOddComponent {
 		int oddCoponent = 0;
 		int evenCoponent = 0;
 		Iterator itr= result.iterator();
-		while(itr.hasNext()){
+		while (itr.hasNext()) {
 			Set currentComponent = (HashSet) itr.next();
-			if((currentComponent.size()&1)==0)
-				evenCoponent+=currentComponent.size();
-			else oddCoponent+=currentComponent.size();;
+			System.out.println(currentComponent.size());
+			if ((currentComponent.size() & 1) == 0)
+				evenCoponent += currentComponent.size();
+			else
+				oddCoponent += currentComponent.size();
 		}
+		System.out.println("**************");
+		result.forEach(set -> {
+			set.forEach(v -> System.out.print(v.getId() + " "));
+			System.out.println();
+		});
 		System.out.println(oddCoponent-evenCoponent);
 	}
 }
