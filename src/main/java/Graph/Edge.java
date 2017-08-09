@@ -75,7 +75,7 @@ public class Edge<T> {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((vertex1 == null) ? 0 : vertex1.hashCode());
-		result = prime * result + ((vertex2 == null) ? 0 : vertex2.hashCode());
+		result = prime * result + ((vertex2 == null)||(result==0) ? 0 : vertex2.hashCode());
 		return result;
 	}
 
