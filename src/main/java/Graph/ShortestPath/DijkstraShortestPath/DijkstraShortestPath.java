@@ -59,7 +59,7 @@ public class DijkstraShortestPath {
 	
 	
 	public static void main(String... args) {
-		Graph<Integer> graph = new Graph<>(false);
+		Graph<Integer> graph = new Graph<Integer>(false);
 		/*
 		0 1 5
 		0 2 2
@@ -84,11 +84,7 @@ public class DijkstraShortestPath {
 		
 		
 	}
-	
-	
-	
-	
-	
+
 	
 	public Map<Vertex<Integer>, Integer> shortestPath(Graph<Integer> graph, Vertex<Integer> sourceVertex) {
 		// stores shortest distance from root to every vertex

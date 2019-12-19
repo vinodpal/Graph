@@ -36,10 +36,12 @@ public class Topological<T> {
 		graph.addEdge(2,7);
 		graph.addEdge(3,4);
 		graph.addEdge(4,5);
-		ArrayList<Vertex> sortedVertex = new ArrayList<Vertex>();  
+//		graph.addEdge(6,8);
+//		graph.addEdge(7,8);
+		ArrayList<Vertex> sortedVertex = new ArrayList<Vertex>();
 		ArrayList<Vertex> visited =  new ArrayList<Vertex>();
 		topological.topologicalSort(graph.getVertex(1),sortedVertex, visited);
 		sortedVertex.forEach(x->System.out.print(x+" , "));
 	}
-	
+
 }
