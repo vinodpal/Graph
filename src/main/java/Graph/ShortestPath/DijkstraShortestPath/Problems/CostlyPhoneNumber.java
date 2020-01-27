@@ -93,7 +93,7 @@ public class CostlyPhoneNumber {
 		int targetNumber;
 		int lengthOfTargetNumber;
 
-		Graph<Integer> graph = new Graph<>(false);
+		Graph<Integer> graph = new Graph<Integer>(false);
 		while ((t--) > 0) {
 
 			for (int i = 0; i < 10; ++i) {

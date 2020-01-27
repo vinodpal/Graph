@@ -61,7 +61,7 @@ public class StronglyConnectedComponent {
 	}
 
 	private Graph<Integer> reverseGraph(Graph<Integer> graph) {
-		Graph<Integer> reverseGraph = new Graph<>(true);
+		Graph<Integer> reverseGraph = new Graph<Integer>(true);
 		for (Edge<Integer> edge : graph.getAllEdges()) {
 			reverseGraph.addEdge(edge.getVertex2().getId(), edge.getVertex1().getId(), edge.getWeight());
 		}
@@ -92,7 +92,7 @@ public class StronglyConnectedComponent {
 	}
 
 	public static void main(String args[]) {
-		Graph<Integer> graph = new Graph<>(true);
+		Graph<Integer> graph = new Graph<Integer>(true);
 		graph.addEdge(0, 1);
 		graph.addEdge(1, 2);
 		graph.addEdge(2, 0);

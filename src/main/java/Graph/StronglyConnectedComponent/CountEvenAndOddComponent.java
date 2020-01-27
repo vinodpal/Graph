@@ -76,7 +76,7 @@ public class CountEvenAndOddComponent {
 	}
 
 	private Graph<Integer> reverseGraph(Graph<Integer> graph) {
-		Graph<Integer> reverseGraph = new Graph<>(true);
+		Graph<Integer> reverseGraph = new Graph<Integer>(true);
 		for (Edge<Integer> edge : graph.getAllEdges()) {
 			reverseGraph.addEdge(edge.getVertex2().getId(), edge.getVertex1().getId(), edge.getWeight());
 		}
@@ -108,7 +108,7 @@ public class CountEvenAndOddComponent {
 
 	public static void main(String args[]) {
 		
-		Graph<Integer> graph = new Graph<>(true);
+		Graph<Integer> graph = new Graph<Integer>(true);
 		/*3 1
 12 11
 10 9

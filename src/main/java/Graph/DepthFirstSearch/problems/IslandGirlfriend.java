@@ -67,7 +67,7 @@ public class IslandGirlfriend {
     Map<Integer, Set<Integer>> map = new HashMap<>(N);
     Integer v1;
     Integer v2;
-
+    String [] str= "A B".split(" ");
     for(int i=0; i<N-1; ++i){
       v1 = s.nextInt();
       v2 = s.nextInt();
